@@ -20,5 +20,11 @@ from django.conf import settings
 from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('profil_data/',profil_data,name='profil_data')
+    path('profil_data/',profil_data,name='profil_data'),
+    path('home/',home,name='home'),
+    path('user_login/',user_login,name='user_login'),
+    path('user_logout/',user_logout,name='user_logout'),
+    path('profile_info/',profile_info,name='profile_info'),
+    path('chenge_password/',chenge_password,name='chenge_password'),
+    path('forgot_password/',forgot_password,name='forgot_password'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
